@@ -1,9 +1,17 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./navBar/NavBar";
+import Home from "./home/Home";
+import Footer from "./footer/Footer";
 
 function App() {
-  return <NavBar />;
+  return (
+    <React.Fragment>
+      <NavBar />
+      <Home />
+      <Footer />
+    </React.Fragment>
+  );
 }
 
 export default App;

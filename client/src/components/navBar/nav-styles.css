@@ -6,6 +6,8 @@
 
 body {
   background-color: #e6dedd;
+  height: 100%;
+  width: 100%;
 }
 
 .navigation-bar {
@@ -18,7 +20,9 @@ body {
   height: 60px;
   justify-content: space-between;
   padding: 0 20px;
-  width: 100vw;
+  position: sticky;
+  top: 0;
+  width: 100%;
 }
 
 .navigation-bar .links {

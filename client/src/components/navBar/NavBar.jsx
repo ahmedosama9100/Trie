@@ -18,11 +18,14 @@ function NavBar() {
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
-            > 
+            >
               Services
             </a>
 
-            <div className="dropdown-menu services-menu" aria-labelledby="dropdownMenuLink">
+            <div
+              className="dropdown-menu services-menu"
+              aria-labelledby="dropdownMenuLink"
+            >
               <a className="dropdown-item" href="#">
                 Cinema
               </a>
