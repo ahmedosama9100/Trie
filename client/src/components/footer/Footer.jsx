@@ -4,5 +4,6 @@ import "./footer.css";
 export default Footer;
 
 function Footer() {
-  return <p className="footer">&copy; Gp 2020</p>;
+  const currentYear = new Date().getFullYear();
+  return <p className="footer">&copy; Trie GP {currentYear}</p>;
 }
