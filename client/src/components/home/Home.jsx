@@ -1,9 +1,13 @@
 import React from "react";
-import "./home.css";
-import coverImage from "./images/trie.jpg";
+import "./styles/home.css";
+import trieLogo from "./images/trieLogo.png";
 
 export default Home;
 
 function Home() {
-  return <img src={coverImage} alt="let's trie" className="cover-image" />;
+  return (
+    <div className="solid-color">
+      <img src={trieLogo} alt="trie logo" className="logo-cover"/>
+    </div>
+  );
 }

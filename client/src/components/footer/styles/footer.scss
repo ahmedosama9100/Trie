@@ -1,4 +1,6 @@
+@import "./../../utilities/variables";
 .footer {
+  color: $headingColor;
   position: absolute;
   text-align: center;
   bottom: 0;

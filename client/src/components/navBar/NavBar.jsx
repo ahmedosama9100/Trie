@@ -1,12 +1,13 @@
 import React from "react";
-import "./nav-styles.css";
+import trieLogo from "./images/trieLogo.png";
+import "./styles/nav-styles.css";
 
 export default NavBar;
 
 function NavBar() {
   return (
     <div className="navigation-bar">
-      <h1 className="home">Trie</h1>
+      <img src={trieLogo} alt="trie Logo" className="logo" />
       <ul className="links">
         <li>
           <div className="dropdown services">
@@ -44,7 +45,6 @@ function NavBar() {
         </li>
         <li>Contact</li>
         <li>About</li>
-        <li>Sign in</li>
       </ul>
     </div>
   );

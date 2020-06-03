@@ -1,0 +1,17 @@
+@import "./../../utilities/variables";
+
+.solid-color {
+  background-color: $navBarColor;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -100;
+}
+
+.logo-cover {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  width: 50%;
+}
