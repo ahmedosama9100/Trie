@@ -1,41 +1,41 @@
-@import "./../variables";
-@import "./../initialize-styles";
+@import "./../utilities/variables";
+@import "./../utilities/initialize-styles";
 
 .navigation-bar {
-    align-items: baseline;
-    background-color: $navBarColor;
-    box-shadow: 0 2px 2px 0 rgba(27, 18, 15, 1);
-    color: $headingColor;
+  align-items: baseline;
+  background-color: $navBarColor;
+  box-shadow: 0 2px 2px 0 rgba(27, 18, 15, 1);
+  color: $headingColor;
+  display: flex;
+  font-family: $headingFont;
+  height: 60px;
+  justify-content: space-between;
+  padding: 0 20px;
+  width: 100vw;
+
+  .links {
     display: flex;
-    font-family: $headingFont;
-    height: 60px;
-    justify-content: space-between;
-    padding: 0 20px;
-    width: 100vw;
+    list-style: none;
 
-    .links {
-        display: flex;
-        list-style: none;
-
-        li {
-            margin: auto 10px;
-        }
-
-        #dropdownMenuLink {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .services-menu {
-            margin-top: 10px;
-            background-color: $navBarColor;
-            a {
-                color: $headingColor;
-            }
-
-            a:hover {
-                background-color: $backgroundColor;
-            }
-        }
+    li {
+      margin: auto 10px;
     }
+
+    #dropdownMenuLink {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .services-menu {
+      margin-top: 10px;
+      background-color: $navBarColor;
+      a {
+        color: $headingColor;
+      }
+
+      a:hover {
+        background-color: $backgroundColor;
+      }
+    }
+  }
 }
