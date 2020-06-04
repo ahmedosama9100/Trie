@@ -28,7 +28,7 @@
   width: 15%;
 }
 
-.navigation-bar .links #dropdownMenuLink {
+.navigation-bar .links .dropdownMenuLink {
   color: inherit;
   text-decoration: none;
 }

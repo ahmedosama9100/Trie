@@ -1,18 +1,19 @@
 import React from "react";
 import trieLogo from "./images/trieLogo.png";
-import "./styles/nav-styles.css";
+import styles from "./styles/nav-styles.module.css";
 
 export default NavBar;
 
 function NavBar() {
+  console.log(styles);
   return (
-    <div className="navigation-bar">
-      <img src={trieLogo} alt="trie Logo" className="logo" />
-      <ul className="links">
+    <div className={styles["navigation-bar"]}>
+      <img src={trieLogo} alt="trie Logo" className={styles["logo"]} />
+      <ul className={styles["links"]}>
         <li>
-          <div className="dropdown services">
+          <div className="dropdown">
             <a
-              className="dropdown-toggle"
+              className={`dropdown-toggle ${styles["dropdownMenuLink"]}`}
               href="#"
               role="button"
               id="dropdownMenuLink"
@@ -24,7 +25,7 @@ function NavBar() {
             </a>
 
             <div
-              className="dropdown-menu services-menu"
+              className={`dropdown-menu ${styles["services-menu"]}`}
               aria-labelledby="dropdownMenuLink"
             >
               <a className="dropdown-item" href="#">
