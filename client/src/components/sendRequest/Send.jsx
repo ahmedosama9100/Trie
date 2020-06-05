@@ -58,12 +58,12 @@ function Send() {
 
       <div className="form-group">
         <label htmlFor="user-description" className={styles["labels"]}>
-          description
+          Content
         </label>
         <textarea
           className={`form-control ${styles["description"]}`}
           id="user-description"
-          placeholder="description"
+          placeholder="Content"
           rows="3"
         ></textarea>
       </div>

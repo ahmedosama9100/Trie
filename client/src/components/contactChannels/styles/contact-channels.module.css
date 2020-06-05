@@ -1,12 +1,11 @@
 .contact-channels {
   color: #e6dedd;
-  list-style: none;
-  height: 100%;
-  margin-left: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   height: inherit;
+  list-style: none;
+  margin-left: 300px;
+  justify-content: space-evenly;
 }
 
 .contact-channels a {

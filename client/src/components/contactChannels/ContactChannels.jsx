@@ -27,7 +27,7 @@ function ContactChannels() {
       </li>
       <li>
         <a href="#">
-          <CallIcon /> 010x-xxx-xxxx
+          <CallIcon /> 010X-XXX-XXXX
         </a>
       </li>
     </ul>
