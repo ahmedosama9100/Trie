@@ -11,10 +11,10 @@ function Home() {
     <ReactFullpage
       navigation={true}
       sectionsColor={["#1b120f", "#e6dedd", "#1b120f"]}
-      render={({ state, fullpageApi }) => {
+      render={() => {
         return (
           <div id="fullpage-wrapper">
-            <div className="section section1">
+            <div className="section">
               <Cover />
             </div>
             <div className="section">

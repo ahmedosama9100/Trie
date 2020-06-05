@@ -1,8 +1,8 @@
 .user-request {
-  width: 50%;
-  margin: auto 70px;
   color: #1b120f;
   font-family: "Montserrat", sans-serif;
+  margin: auto 70px;
+  width: 50%;
 }
 
 .user-request .labels {
@@ -13,9 +13,9 @@
 .user-request .full-name,
 .user-request .title,
 .user-request .description {
-  font-family: inherit;
   background-color: #e6dedd;
   color: inherit;
+  font-family: inherit;
 }
 
 .user-request .email:focus,
@@ -27,15 +27,15 @@
 }
 
 .user-request .submit-button {
-  font-family: inherit;
-  color: #c89d2c;
   border: #c89d2c 1px solid;
+  color: #c89d2c;
+  font-family: inherit;
   margin-top: 10px;
 }
 
 .user-request .submit-button:hover, .user-request .submit-button:active {
   background-color: #c89d2c;
+  box-shadow: none;
   color: #1b120f;
   outline: none;
-  box-shadow: none;
 }
