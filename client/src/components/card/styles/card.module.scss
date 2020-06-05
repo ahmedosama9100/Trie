@@ -1,0 +1,17 @@
+@import "./../../utilities/variables";
+
+.card-container {
+  background-color: $backgroundColor;
+  color: $navBarColor;
+  font-family: $textFont;
+  height: 30%;
+  width: 20%;
+
+  .card-heading {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  .card-body {
+    font-size: 1.1rem;
+  }
+}

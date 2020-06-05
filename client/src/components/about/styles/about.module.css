@@ -1,0 +1,15 @@
+.about-header {
+  color: #c89d2c;
+  font-family: "Merriweather", serif;
+  font-size: 4rem;
+  margin: 0 auto 80px;
+  text-align: center;
+  width: 100%;
+}
+
+.about-cards {
+  align-items: stretch;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}

@@ -1,0 +1,16 @@
+.card-container {
+  background-color: #e6dedd;
+  color: #1b120f;
+  font-family: "Montserrat", sans-serif;
+  height: 30%;
+  width: 20%;
+}
+
+.card-container .card-heading {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.card-container .card-body {
+  font-size: 1.1rem;
+}

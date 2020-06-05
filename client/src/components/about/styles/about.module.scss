@@ -1,0 +1,15 @@
+@import "./../../utilities/variables";
+.about-header {
+  color: $headingColor;
+  font-family: $headingFont;
+  font-size: 4rem;
+  margin: 0 auto 80px;
+  text-align: center;
+  width: 100%;
+}
+.about-cards {
+  align-items: stretch;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
