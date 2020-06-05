@@ -1,0 +1,41 @@
+.user-request {
+  width: 50%;
+  margin: auto 70px;
+  color: #1b120f;
+  font-family: "Montserrat", sans-serif;
+}
+
+.user-request .labels {
+  color: #e6dedd;
+}
+
+.user-request .email,
+.user-request .full-name,
+.user-request .title,
+.user-request .description {
+  font-family: inherit;
+  background-color: #e6dedd;
+  color: inherit;
+}
+
+.user-request .email:focus,
+.user-request .full-name:focus,
+.user-request .title:focus,
+.user-request .description:focus {
+  border-color: #c89d2c;
+  box-shadow: 0 0 3px #c89d2c;
+}
+
+.user-request .submit-button {
+  font-family: inherit;
+  color: #c89d2c;
+  border: #c89d2c 1px solid;
+  margin-top: 10px;
+}
+
+.user-request .submit-button:hover, .user-request .submit-button:active {
+  background-color: #c89d2c;
+  color: #1b120f;
+  outline: none;
+  box-shadow: none;
+}

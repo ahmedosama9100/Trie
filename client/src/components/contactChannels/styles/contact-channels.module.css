@@ -1,0 +1,19 @@
+.contact-channels {
+  color: #e6dedd;
+  list-style: none;
+  height: 100%;
+  margin-left: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: inherit;
+}
+
+.contact-channels a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact-channels a:hover {
+  color: #c89d2c;
+}

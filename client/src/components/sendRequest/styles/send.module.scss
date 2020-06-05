@@ -1,0 +1,42 @@
+@import "./../../utilities/variables";
+
+.user-request {
+  width: 50%;
+  margin: auto 70px;
+  color: $navBarColor;
+  font-family: $textFont;
+
+  .labels {
+    color: $backgroundColor;
+  }
+
+  .email,
+  .full-name,
+  .title,
+  .description {
+    font-family: inherit;
+    background-color: $backgroundColor;
+    color: inherit;
+  }
+
+  .email:focus,
+  .full-name:focus,
+  .title:focus,
+  .description:focus {
+    border-color: $headingColor;
+    box-shadow: 0 0 3px $headingColor;
+  }
+  .submit-button {
+    font-family: inherit;
+    color: $headingColor;
+    border: $headingColor 1px solid;
+    margin-top: 10px;
+    &:hover,
+    &:active {
+      background-color: $headingColor;
+      color: $navBarColor;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+}
