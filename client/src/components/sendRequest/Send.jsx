@@ -5,6 +5,7 @@ export default Send;
 
 function Send() {
   function demo(e) {
+    console.log(e);
     e.preventDefault();
   }
 
@@ -16,7 +17,7 @@ function Send() {
       onSubmit={demo}
     >
       <div className="form-group">
-        <label for="user-email" className={styles["labels"]}>
+        <label htmlFor="user-email" className={styles["labels"]}>
           Email address
         </label>
         <input
@@ -29,7 +30,7 @@ function Send() {
       </div>
 
       <div className="form-group">
-        <label for="user-full-name" className={styles["labels"]}>
+        <label htmlFor="user-full-name" className={styles["labels"]}>
           Full Name
         </label>
         <input
@@ -42,7 +43,7 @@ function Send() {
       </div>
 
       <div className="form-group">
-        <label for="user-title" className={styles["labels"]}>
+        <label htmlFor="user-title" className={styles["labels"]}>
           Title
         </label>
         <input
@@ -56,7 +57,7 @@ function Send() {
       </div>
 
       <div className="form-group">
-        <label for="user-description" className={styles["labels"]}>
+        <label htmlFor="user-description" className={styles["labels"]}>
           description
         </label>
         <textarea

@@ -33,7 +33,12 @@ function About() {
       <h1 className={styles["about-header"]}>About Us</h1>
       <div className={styles["about-cards"]}>
         {cardsData.map((card) => (
-          <Card src={card.src} title={card.title} content={card.content} />
+          <Card
+            key={card.title}
+            src={card.src}
+            title={card.title}
+            content={card.content}
+          />
         ))}
       </div>
     </div>
