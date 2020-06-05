@@ -14,6 +14,11 @@
   z-index: 100;
 }
 
+.navigation-bar a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .navigation-bar .logo {
   width: 70px;
   height: 70px;

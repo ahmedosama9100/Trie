@@ -9,8 +9,10 @@ export default Home;
 function Home() {
   return (
     <ReactFullpage
-      navigation={true}
+      anchors={["cover", "about", "contact"]}
       sectionsColor={["#1b120f", "#e6dedd", "#1b120f"]}
+      navigation={true}
+      fitToSection={true}
       render={() => {
         return (
           <div id="fullpage-wrapper">

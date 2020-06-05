@@ -5,7 +5,11 @@ import styles from "./styles/nav-styles.module.css";
 export default NavBar;
 
 function LogoIcon() {
-  return <img src={trieLogo} alt="trie Logo" className={styles["logo"]} />;
+  return (
+    <a href="cover">
+      <img src={trieLogo} alt="trie Logo" className={styles["logo"]} />
+    </a>
+  );
 }
 
 function NavigationItems() {
@@ -27,8 +31,12 @@ function NavigationItems() {
           <DropDownItems />
         </div>
       </li>
-      <li>Contact</li>
-      <li>About</li>
+      <li>
+        <a href="#contact">Contact</a>
+      </li>
+      <li>
+        <a href="#about">About</a>
+      </li>
     </ul>
   );
 }
