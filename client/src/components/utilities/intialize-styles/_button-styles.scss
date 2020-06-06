@@ -1,0 +1,17 @@
+@import "./../variables/fonts/fonts";
+
+@mixin button($themeColor, $colorHover) {
+  border: $themeColor 1px solid;
+  color: $themeColor;
+  font-family: inherit;
+  margin-top: 10px;
+
+  &:hover,
+  &:active {
+    background-color: $themeColor;
+    box-shadow: none;
+    color: $colorHover;
+    outline: none;
+    border: none;
+  }
+}

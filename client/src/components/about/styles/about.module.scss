@@ -1,18 +1,25 @@
 @import "./../../utilities/variables/colors/colors";
 @import "./../../utilities/variables/fonts/fonts";
 
-.about-header {
-  color: $headingColor;
-  font-family: $headingFont;
-  font-size: 4rem;
-  margin: 0 auto 80px;
-  text-align: center;
+.about {
+  height: 90%;
+  margin-top: 100px;
   width: 100%;
-}
 
-.about-cards {
-  align-items: stretch;
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
+  .about-header {
+    color: $headingColor;
+    font-family: $headingFont;
+    font-size: 4rem;
+    margin: 0 auto 40px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .about-cards {
+    align-items: stretch;
+    display: flex;
+    justify-content: space-evenly;
+    max-height: 78%;
+    width: 100%;
+  }
 }

@@ -2,6 +2,7 @@
   background-color: #e6dedd;
   color: #1b120f;
   font-family: "Montserrat", sans-serif;
+  position: relative;
   width: 20%;
 }
 
@@ -12,6 +13,26 @@
 }
 
 .card-container .card-body {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  max-height: 80%;
+  overflow: auto;
   text-align: justify;
+}
+
+.card-container .view-full-card {
+  border: #1b120f 1px solid;
+  color: #1b120f;
+  font-family: inherit;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  width: 50%;
+}
+
+.card-container .view-full-card:hover, .card-container .view-full-card:active {
+  background-color: #1b120f;
+  box-shadow: none;
+  color: #e6dedd;
+  outline: none;
+  border: none;
 }

@@ -1,10 +1,12 @@
 @import "./../../utilities/variables/colors/colors";
 @import "./../../utilities/variables/fonts/fonts";
+@import "./../../utilities/intialize-styles/button-styles";
 
 .card-container {
   background-color: $backgroundColor;
   color: $navBarColor;
   font-family: $textFont;
+  position: relative;
   width: 20%;
 
   .card-heading {
@@ -14,7 +16,16 @@
   }
 
   .card-body {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    max-height: 80%;
+    overflow: auto;
     text-align: justify;
+  }
+
+  .view-full-card {
+    @include button($navBarColor, $backgroundColor);
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 50%;
   }
 }

@@ -14,13 +14,19 @@ function Card(props) {
         <h5 className={`card-title ${styles["card-heading"]}`}>
           {props.title}
         </h5>
-        <p className={`card-text ${styles["card-body"]}`}>{props.content}</p>
-        {renderButton(props.page) && (
-          <a href="#" class="btn btn-primary">
-            Go somewhere
-          </a>
-        )}
+        <p className={`card-text h-100 ${styles["card-body"]}`}>
+          {props.content}
+        </p>
       </div>
+
+      {renderButton(props.page) && (
+        <a
+          href="#"
+          className={`btn btn-outline-light  ${styles["button"]} ${styles["view-full-card"]}`}
+        >
+          View
+        </a>
+      )}
     </div>
   );
 }

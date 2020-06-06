@@ -1,5 +1,6 @@
 @import "./../../utilities/variables/colors/colors";
 @import "./../../utilities/variables/fonts/fonts";
+@import "./../../utilities/intialize-styles/button-styles";
 
 .user-request {
   color: $navBarColor;
@@ -29,17 +30,6 @@
   }
 
   .submit-button {
-    border: $headingColor 1px solid;
-    color: $headingColor;
-    font-family: inherit;
-    margin-top: 10px;
-
-    &:hover,
-    &:active {
-      background-color: $headingColor;
-      box-shadow: none;
-      color: $navBarColor;
-      outline: none;
-    }
+    @include button($headingColor, $navBarColor);
   }
 }

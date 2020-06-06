@@ -29,7 +29,7 @@ function About() {
     },
   ];
   return (
-    <div>
+    <div className={styles["about"]}>
       <h1 className={styles["about-header"]}>About Us</h1>
       <div className={styles["about-cards"]}>
         {cardsData.map((card) => (

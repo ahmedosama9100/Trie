@@ -1,15 +1,22 @@
-.about-header {
+.about {
+  height: 90%;
+  margin-top: 100px;
+  width: 100%;
+}
+
+.about .about-header {
   color: #c89d2c;
   font-family: "Merriweather", serif;
   font-size: 4rem;
-  margin: 0 auto 80px;
+  margin: 0 auto 40px;
   text-align: center;
   width: 100%;
 }
 
-.about-cards {
+.about .about-cards {
   align-items: stretch;
   display: flex;
   justify-content: space-evenly;
+  max-height: 78%;
   width: 100%;
 }
