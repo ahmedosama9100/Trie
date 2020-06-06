@@ -1,4 +1,5 @@
 import React from "react";
+import "./utilities/intialize-styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./navBar/NavBar";
 import Home from "./home/Home";
@@ -8,7 +9,7 @@ function App() {
   return (
     <React.Fragment>
       <NavBar />
-      <Home />
+      {/* <Home /> */}
       <Footer />
     </React.Fragment>
   );
