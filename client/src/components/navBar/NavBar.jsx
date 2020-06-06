@@ -6,7 +6,7 @@ export default NavBar;
 
 function LogoIcon() {
   return (
-    <a href="cover">
+    <a href="/">
       <img src={trieLogo} alt="trie Logo" className={styles["logo"]} />
     </a>
   );

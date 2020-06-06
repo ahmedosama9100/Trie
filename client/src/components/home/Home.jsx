@@ -9,7 +9,7 @@ export default Home;
 function Home() {
   return (
     <ReactFullpage
-      anchors={["cover", "about", "contact"]}
+      anchors={["/", "about", "contact"]}
       sectionsColor={["#1b120f", "#e6dedd", "#1b120f"]}
       navigation={true}
       fitToSection={true}
