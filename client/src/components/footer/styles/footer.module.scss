@@ -1,8 +1,10 @@
-@import "./../../utilities/variables";
+@import "./../../utilities/variables/colors/colors";
+@import "./../../utilities/variables/fonts/fonts";
 
 .footer {
   bottom: 0;
   color: $headingColor;
+  font-family: $textFont;
   position: absolute;
   text-align: center;
   width: 100%;

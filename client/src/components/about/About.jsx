@@ -38,6 +38,7 @@ function About() {
             src={card.src}
             title={card.title}
             content={card.content}
+            page="about"
           />
         ))}
       </div>
