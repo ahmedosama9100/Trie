@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../aboutCard/AboutCard";
+import ServicesCard from "./../servicesCard/ServicesCard";
 import styles from "./styles/hotel.module.css";
 
 export default Hotel;
@@ -62,16 +62,5 @@ const hotels = [
 ];
 
 function Hotel() {
-  return (
-    <div className={styles["hotel-container"]}>
-      {hotels.map((hotel) => (
-        <Card
-          src={hotel.src}
-          title={hotel.title}
-          content={hotel.content}
-          page="hotel"
-        />
-      ))}
-    </div>
-  );
+  return <ServicesCard />;
 }

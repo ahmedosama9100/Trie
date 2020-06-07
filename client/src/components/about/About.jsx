@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../aboutCard/AboutCard";
+import AboutCard from "../aboutCard/AboutCard";
 import styles from "./styles/about.module.css";
 
 export default About;
@@ -33,7 +33,7 @@ function About() {
       <h1 className={styles["about-header"]}>About Us</h1>
       <div className={styles["about-cards"]}>
         {cardsData.map((card) => (
-          <Card
+          <AboutCard
             key={card.title}
             src={card.src}
             title={card.title}
