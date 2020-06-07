@@ -2,10 +2,10 @@
 @import "./../../utilities/variables/fonts/fonts";
 
 .footer {
-  bottom: 0;
+  bottom: 20px;
   color: $headingColor;
   font-family: $textFont;
-  position: absolute;
+  position: relative;
   text-align: center;
   width: 100%;
 }

@@ -11,7 +11,7 @@ function ContactChannels() {
   return (
     <ul className={styles["contact-channels"]}>
       <li>
-        <a href="#">
+        <a href="https://www.facebook.com/TRIE-101828941570262/">
           <FacebookIcon /> Facebook
         </a>
       </li>

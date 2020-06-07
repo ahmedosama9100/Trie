@@ -1,8 +1,8 @@
 .footer {
-  bottom: 0;
+  bottom: 20px;
   color: #c89d2c;
   font-family: "Montserrat", sans-serif;
-  position: absolute;
+  position: relative;
   text-align: center;
   width: 100%;
 }

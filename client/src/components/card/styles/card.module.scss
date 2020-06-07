@@ -5,8 +5,9 @@
 .card-container {
   background-color: $backgroundColor;
   color: $navBarColor;
+  display: inline-block;
   font-family: $textFont;
-  position: relative;
+  margin: 10px;
   width: 20%;
 
   .card-heading {
@@ -22,10 +23,12 @@
     text-align: justify;
   }
 
+  .center-text {
+    text-align: center;
+  }
+
   .view-full-card {
     @include button($navBarColor, $backgroundColor);
-    margin-bottom: 20px;
-    margin-left: 20px;
-    width: 50%;
+    width: 100%;
   }
 }
