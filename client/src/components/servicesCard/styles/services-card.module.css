@@ -1,8 +1,8 @@
 .card-container {
-  width: 100%;
+  background-color: #e6dedd;
   color: #1b120f;
   font-family: "Montserrat", sans-serif;
-  background-color: #e6dedd;
+  width: 100%;
 }
 
 .card-container .card-image {

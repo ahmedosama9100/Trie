@@ -1,0 +1,14 @@
+@import "./../../utilities/variables/colors/colors";
+@import "./../../utilities/variables/fonts/fonts";
+
+.side-page-container {
+  box-shadow: 0 0 1px $navBarColor;
+  color: $navBarColor;
+  font-family: $textFont;
+  height: 90%;
+  padding: 10px 20px;
+  position: fixed;
+  right: 10px;
+  top: 70px;
+  width: 55%;
+}

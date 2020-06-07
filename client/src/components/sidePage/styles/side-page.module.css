@@ -1,0 +1,11 @@
+.side-page-container {
+  box-shadow: 0 0 1px #1b120f;
+  color: #1b120f;
+  font-family: "Montserrat", sans-serif;
+  height: 90%;
+  padding: 10px 20px;
+  position: fixed;
+  right: 10px;
+  top: 70px;
+  width: 55%;
+}
