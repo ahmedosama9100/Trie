@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./../card/Card";
+import Card from "../aboutCard/AboutCard";
 import styles from "./styles/hotel.module.css";
 
 export default Hotel;

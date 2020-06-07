@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./../card/Card";
+import Card from "../aboutCard/AboutCard";
 import styles from "./styles/about.module.css";
 
 export default About;
