@@ -1,0 +1,18 @@
+@import "./../../utilities/variables/colors/colors";
+@import "./../../utilities/variables/fonts/fonts";
+@import "./../../utilities/intialize-styles/button-styles";
+.card-container {
+  width: 100%;
+  color: $navBarColor;
+  font-family: $textFont;
+  background-color: $backgroundColor;
+  .card-image {
+    height: 100%;
+    object-fit: cover;
+  }
+  .view-button {
+    @include button($navBarColor, $backgroundColor);
+    float: right;
+    margin-bottom: 10px;
+  }
+}

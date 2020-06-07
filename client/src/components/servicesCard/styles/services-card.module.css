@@ -1,1 +1,28 @@
-/* No CSS */
+.card-container {
+  width: 100%;
+  color: #1b120f;
+  font-family: "Montserrat", sans-serif;
+  background-color: #e6dedd;
+}
+
+.card-container .card-image {
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-container .view-button {
+  border: #1b120f 1px solid;
+  color: #1b120f;
+  font-family: inherit;
+  margin-top: 10px;
+  float: right;
+  margin-bottom: 10px;
+}
+
+.card-container .view-button:hover, .card-container .view-button:active {
+  background-color: #1b120f;
+  box-shadow: none;
+  color: #e6dedd;
+  outline: none;
+  border: none;
+}
