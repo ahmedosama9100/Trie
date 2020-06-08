@@ -1,11 +1,11 @@
 import React from "react";
-import ServicesCard from "./../servicesCard/ServicesCard";
-import SidePage from "./../sidePage/SidePage";
-import styles from "./styles/hotel.module.css";
+import ServicesCard from "../servicesCard/ServicesCard";
+import SidePage from "../sidePage/SidePage";
+import styles from "./styles/service.module.css";
 
-export default Hotel;
+export default Service;
 
-const hotels = [
+const services = [
   {
     src:
       "https://images.unsplash.com/photo-1491555103944-7c647fd857e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
@@ -71,16 +71,16 @@ const hotels = [
   },
 ];
 
-function Hotel() {
+function Service() {
   return (
     <div>
       <div className={styles["hotel-list"]}>
-        {hotels.map((hotel) => (
+        {services.map((service) => (
           <ServicesCard
-            src={hotel.src}
-            title={hotel.title}
-            location={hotel.location}
-            rating={hotel.rating}
+            src={service.src}
+            title={service.title}
+            location={service.location}
+            rating={service.rating}
           />
         ))}
       </div>

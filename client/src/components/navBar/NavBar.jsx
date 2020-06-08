@@ -48,16 +48,16 @@ function DropDownItems() {
       className={`dropdown-menu ${styles["services-menu"]}`}
       aria-labelledby="dropdownMenuLink"
     >
-      <a className="dropdown-item" href="#">
+      <Link className="dropdown-item" to="/service/cinema">
         Cinema
-      </a>
-      <Link className="dropdown-item" to="/hotel">
+      </Link>
+      <Link className="dropdown-item" to="/service/hotel">
         Hotel
       </Link>
 
-      <a className="dropdown-item" href="#">
+      <Link className="dropdown-item" to="/service/restaurant">
         Restaurant
-      </a>
+      </Link>
     </div>
   );
 }
