@@ -1,8 +1,7 @@
 import React from "react";
-import EmailIcon from "@material-ui/icons/Email";
-import CallIcon from "@material-ui/icons/Call";
 import FacebookIcon from "@material-ui/icons/Facebook";
-import TwitterIcon from "@material-ui/icons/Twitter";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import EmailIcon from "@material-ui/icons/Email";
 import styles from "./styles/contact-channels.module.css";
 
 export default ContactChannels;
@@ -17,17 +16,12 @@ function ContactChannels() {
       </li>
       <li>
         <a href="#">
-          <TwitterIcon /> Twitter
+          <InstagramIcon /> Instagram
         </a>
       </li>
       <li>
-        <a href="mailto:webmaster@example.com">
-          <EmailIcon /> blablabla@gmail.com
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <CallIcon /> 010X-XXX-XXXX
+        <a href="mailto:Trie-eg@protonmail.com">
+          <EmailIcon /> Mail@mail.com
         </a>
       </li>
     </ul>
