@@ -11,8 +11,14 @@ function App() {
   return (
     <Router>
       <NavBar />
-      <Home />
-      {/* <Hotel /> */}
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/hotel">
+          <Hotel />
+        </Route>
+      </Switch>
       <Footer />
     </Router>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import trieLogo from "./images/trieLogo.png";
 import styles from "./styles/nav-styles.module.css";
 
@@ -6,9 +7,9 @@ export default NavBar;
 
 function LogoIcon() {
   return (
-    <a href="/">
+    <Link to="/">
       <img src={trieLogo} alt="trie Logo" className={styles["logo"]} />
-    </a>
+    </Link>
   );
 }
 
@@ -32,10 +33,10 @@ function NavigationItems() {
         </div>
       </li>
       <li>
-        <a href="#about">About</a>
+        <a href="/#about">About</a>
       </li>
       <li>
-        <a href="#contact">Contact</a>
+        <a href="/#contact">Contact</a>
       </li>
     </ul>
   );
@@ -50,9 +51,9 @@ function DropDownItems() {
       <a className="dropdown-item" href="#">
         Cinema
       </a>
-      <a className="dropdown-item" href="#">
+      <Link className="dropdown-item" to="/hotel">
         Hotel
-      </a>
+      </Link>
 
       <a className="dropdown-item" href="#">
         Restaurant
