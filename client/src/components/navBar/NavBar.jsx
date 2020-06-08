@@ -53,9 +53,6 @@ function DropDownItems() {
       <a className="dropdown-item" href="#">
         Hotel
       </a>
-      <a className="dropdown-item" href="#">
-        Ride
-      </a>
 
       <a className="dropdown-item" href="#">
         Restaurant
