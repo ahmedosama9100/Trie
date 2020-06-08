@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./styles/send.module.css";
 
 export default Send;
 
 function Send() {
+  const request = {
+    email: "",
+    fullName: "",
+    title: "",
+    content: "",
+  };
+  const [userRequest, setUserRequest] = useState(request);
+
+  function trackRequest(e) {
+    const { name, value } = e.target;
+    const newRequest = { ...request, [name]: value };
+    setUserRequest((prev) => ({ ...prev, [name]: value }));
+  }
+
   function demo(e) {
-    console.log(e);
+    
     e.preventDefault();
   }
 
@@ -23,9 +37,12 @@ function Send() {
         <input
           className={`form-control ${styles["email"]}`}
           id="user-email"
+          name="email"
+          onChange={trackRequest}
           placeholder="E-mail"
           required
           type="email"
+          value={userRequest.email}
         />
       </div>
 
@@ -36,9 +53,12 @@ function Send() {
         <input
           className={`form-control ${styles["full-name"]}`}
           id="user-full-name"
+          name="fullName"
+          onChange={trackRequest}
           placeholder="Full Name"
           required
           type="text"
+          value={userRequest.fullName}
         />
       </div>
 
@@ -50,9 +70,12 @@ function Send() {
           autoComplete="off"
           className={`form-control ${styles["title"]}`}
           id="user-title"
+          name="title"
+          onChange={trackRequest}
           placeholder="Title"
           required
           type="text"
+          value={userRequest.title}
         />
       </div>
 
@@ -63,8 +86,11 @@ function Send() {
         <textarea
           className={`form-control ${styles["description"]}`}
           id="user-description"
+          name="content"
+          onChange={trackRequest}
           placeholder="Content"
           rows="3"
+          value={userRequest.content}
         ></textarea>
       </div>
 
