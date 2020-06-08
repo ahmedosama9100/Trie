@@ -6,9 +6,26 @@
   color: $navBarColor;
   font-family: $textFont;
   height: 90%;
+  overflow: auto;
   padding: 10px 20px;
   position: fixed;
   right: 10px;
   top: 70px;
   width: 55%;
+
+  .main-heading,
+  .description,
+  .reservation-heading {
+    margin: 20px auto 30px;
+  }
+
+  .main-heading {
+    font-weight: bold;
+  }
+
+  .description-content {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    text-align: justify;
+  }
 }

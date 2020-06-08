@@ -3,9 +3,26 @@
   color: #1b120f;
   font-family: "Montserrat", sans-serif;
   height: 90%;
+  overflow: auto;
   padding: 10px 20px;
   position: fixed;
   right: 10px;
   top: 70px;
   width: 55%;
+}
+
+.side-page-container .main-heading,
+.side-page-container .description,
+.side-page-container .reservation-heading {
+  margin: 20px auto 30px;
+}
+
+.side-page-container .main-heading {
+  font-weight: bold;
+}
+
+.side-page-container .description-content {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  text-align: justify;
 }

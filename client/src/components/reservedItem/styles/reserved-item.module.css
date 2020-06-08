@@ -1,0 +1,29 @@
+.item {
+  align-items: baseline;
+  display: flex;
+  height: 30px;
+  width: 40%;
+}
+
+.item .item-counter {
+  background-color: inherit;
+  border: 1px solid #1b120f;
+  font-weight: bold;
+  margin-right: 10px;
+  width: 30px;
+}
+
+.item .add-item,
+.item .remove-item {
+  background-color: inherit;
+  border: 1px solid #1b120f;
+  margin-right: 5px;
+  outline: none;
+  width: 30px;
+}
+
+.item .item-name {
+  margin-right: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}

@@ -10,8 +10,8 @@ function App() {
   return (
     <React.Fragment>
       <NavBar />
-      <Home />
-      {/* <Hotel /> */}
+      {/* <Home /> */}
+      <Hotel />
       <Footer />
     </React.Fragment>
   );

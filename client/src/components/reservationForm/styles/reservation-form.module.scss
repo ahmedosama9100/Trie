@@ -1,0 +1,22 @@
+@import "./../../utilities/variables/colors/colors";
+@import "./../../utilities//intialize-styles/button-styles";
+
+.reservation-form {
+  .email-field,
+  .full-name-field {
+    background-color: inherit;
+    border-color: $navBarColor;
+    color: $navBarColor;
+  }
+
+  .email-field:focus,
+  .full-name-field:focus {
+    box-shadow: 0 0 3px $navBarColor;
+  }
+
+  .reservation-button {
+    @include button($navBarColor, $backgroundColor);
+    margin: 10px auto;
+    width: 40%;
+  }
+}
