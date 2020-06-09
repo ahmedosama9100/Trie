@@ -15,7 +15,7 @@ function ContactChannels() {
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="https://www.instagram.com/">
           <InstagramIcon /> Instagram
         </a>
       </li>

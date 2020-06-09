@@ -14,22 +14,17 @@ function Send() {
 
   function trackRequest(e) {
     const { name, value } = e.target;
-    const newRequest = { ...request, [name]: value };
     setUserRequest((prev) => ({ ...prev, [name]: value }));
   }
 
   function demo(e) {
-    
     e.preventDefault();
+
+    setUserRequest(request);
   }
 
   return (
-    <form
-      action="#"
-      className={styles["user-request"]}
-      method="post"
-      onSubmit={demo}
-    >
+    <form className={styles["user-request"]} onSubmit={demo}>
       <div className="form-group">
         <label htmlFor="user-email" className={styles["labels"]}>
           Email address

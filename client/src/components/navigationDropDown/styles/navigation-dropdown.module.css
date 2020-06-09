@@ -1,0 +1,13 @@
+.services-menu {
+  background-color: #1b120f;
+  margin-top: 10px;
+}
+
+.services-menu .service-item {
+  color: #c89d2c;
+}
+
+.services-menu .service-item:hover {
+  background-color: #e6dedd;
+  color: #1b120f;
+}

@@ -1,0 +1,15 @@
+@import "./../../utilities/variables/colors/colors";
+
+.services-menu {
+  background-color: $navBarColor;
+  margin-top: 10px;
+
+  .service-item {
+    color: $headingColor;
+
+    &:hover {
+      background-color: $backgroundColor;
+      color: $navBarColor;
+    }
+  }
+}
