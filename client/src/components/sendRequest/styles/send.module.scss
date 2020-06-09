@@ -21,6 +21,12 @@
     font-family: inherit;
   }
 
+  .description {
+    height: 100px;
+    max-height: 150px;
+    min-height: 70px;
+  }
+
   .email:focus,
   .full-name:focus,
   .title:focus,

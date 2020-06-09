@@ -18,6 +18,12 @@
   font-family: inherit;
 }
 
+.user-request .description {
+  height: 100px;
+  max-height: 150px;
+  min-height: 70px;
+}
+
 .user-request .email:focus,
 .user-request .full-name:focus,
 .user-request .title:focus,
