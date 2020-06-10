@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { postRequest } from "./../utilities/axiosRequests";
 import styles from "./styles/send.module.css";
 
 export default Send;
@@ -19,6 +20,17 @@ function Send() {
 
   function demo(e) {
     e.preventDefault();
+    const { email, fullName, title, content } = userRequest;
+    const body = {
+      email,
+      fullName,
+      title,
+      content,
+    };
+
+    postRequest("http://localhost:8000/send-request", body)
+      .then((res) => alert("Your request submitted successfully"))
+      .catch((err) => console.log(err));
 
     setUserRequest(request);
   }
