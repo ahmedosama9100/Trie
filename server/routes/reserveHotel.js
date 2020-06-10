@@ -33,32 +33,35 @@ router.post("/:hotelid", async (req, res) => {
     const hotel = await Hotel.findById(req.params.hotelid);
     const numberOfRooms = hotel.numberOfRooms;
     const requestedRooms = req.body.numberOfRooms;
-    let message = {};
+
+    console.log(hotel);
+    let message = {
+      from: `"Trie-eg" <${process.env.EMAIL}>`,
+      to: `${req.body.email}`,
+    };
+
     // there is available number of rooms
     if (numberOfRooms - requestedRooms >= 0) {
       await Hotel.updateOne(
         { _id: req.params.hotelid },
         { $set: { numberOfRooms: numberOfRooms - requestedRooms } }
       );
+
       const totalRooms = calculateRooms(requestedRooms);
-      message = {
-        from: `"Trie-eg" <${process.env.EMAIL}>`,
-        to: `${req.body.email}`,
-        subject: "Order Confiramtion",
-        html: `<h1>Order Summary</h1>
-        <h3>Mr./Mrs. ${req.body.name} You reserve</h3>
-        <p>Single: ${totalRooms.single}</p>
-        <p>Double: ${totalRooms.double}</p>
-        <p>Trible: ${totalRooms.trible}</p>
-        `,
-      };
+
+      message.subject = "Order Confiramtion";
+      message.html = `<h1>Order Summary</h1>
+      <h3>Mr./Mrs. ${req.body.name} You've reserved: </h3>
+      <p>Single Room: ${totalRooms.single}</p>
+      <p>Double Room: ${totalRooms.double}</p>
+      <p>Trible Room: ${totalRooms.trible}</p>
+      <p>and your order number is : <strong>${hotel._id}</strong></p>
+      `;
     } else {
-      message = {
-        from: `"Trie-eg" <${process.env.EMAIL}>`,
-        to: `${req.body.email}`,
-        subject: "Sorry",
-        text: "The hotel is fully reserved 😔",
-      };
+      message.subject = "Rejected Request";
+      message.html = `<p>Sorry, there are no available rooms in this hotel 😔</p>
+        <p>Please try again later </p>
+        `;
     }
     sendMail(message);
     res.json({ message: "reserved successfully" });
