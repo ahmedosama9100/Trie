@@ -29,10 +29,11 @@ function Send() {
     };
 
     postRequest("http://localhost:8000/send-request", body)
-      .then((res) => alert("Your request submitted successfully"))
+      .then(() => {
+        alert("Your request submitted successfully");
+        setUserRequest(request);
+      })
       .catch((err) => console.log(err));
-
-    setUserRequest(request);
   }
 
   return (
