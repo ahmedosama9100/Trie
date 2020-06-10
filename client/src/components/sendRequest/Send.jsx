@@ -18,7 +18,7 @@ function Send() {
     setUserRequest((prev) => ({ ...prev, [name]: value }));
   }
 
-  function demo(e) {
+  function handleSubmit(e) {
     e.preventDefault();
     const { email, fullName, title, content } = userRequest;
     const body = {
@@ -37,7 +37,7 @@ function Send() {
   }
 
   return (
-    <form className={styles["user-request"]} onSubmit={demo}>
+    <form className={styles["user-request"]} onSubmit={handleSubmit}>
       <div className="form-group">
         <label htmlFor="user-email" className={styles["labels"]}>
           Email address

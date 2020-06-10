@@ -13,18 +13,27 @@ function ContactChannels() {
         <a
           href="https://www.facebook.com/TRIE-101828941570262/"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <FacebookIcon /> Facebook
         </a>
       </li>
       <li>
-        <a href="https://www.instagram.com/" target="_blank">
+        <a
+          href="https://www.instagram.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <InstagramIcon /> Instagram
         </a>
       </li>
       <li>
-        <a href="mailto:Trie-eg@protonmail.com" target="_blank">
-          <EmailIcon /> Mail@mail.com
+        <a
+          href="mailto:trie9510@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <EmailIcon /> trie9510@gmail.com
         </a>
       </li>
     </ul>
