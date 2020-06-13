@@ -18,6 +18,9 @@ const hotelSchema = new mongoose.Schema({
     type: Number,
     min: 0,
   },
+  link: {
+    type: String,
+  },
 });
 
 module.exports = Hotel = mongoose.model("Hotel", hotelSchema);
