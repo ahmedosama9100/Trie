@@ -1,4 +1,18 @@
+@import "./../../utilities/variables/colors/colors";
+@import "./../../utilities/variables/fonts/fonts";
+@import "./../../utilities/intialize-styles/button-styles";
+
 .hotel-list {
   margin: 70px 20px 100px;
   width: 40%;
+  .service-card {
+    font-family: $textFont;
+    position: relative;
+    .view-side-page {
+      @include button($navBarColor, $backgroundColor);
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+    }
+  }
 }

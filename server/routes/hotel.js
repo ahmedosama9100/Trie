@@ -3,7 +3,7 @@ const router = express.Router();
 const Hotel = require("./../model/hotel");
 
 router.get("/", async (req, res) => {
-  const hotels = await Hotel.find({}, "_id name rating location link");
+  const hotels = await Hotel.find({}, "_id src name location rating");
   res.json(hotels).status(200);
 });
 

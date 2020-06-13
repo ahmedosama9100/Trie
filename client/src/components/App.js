@@ -4,9 +4,9 @@ import "./utilities/intialize-styles/intialize-styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./navBar/NavBar";
 import Home from "./home/Home";
-import Hotel from "./service/service";
-import Restaurant from "./service/service";
-import Cinema from "./service/service";
+import Hotel from "./hotel/Hotel";
+import Restaurant from "./restaurant/Restaurant";
+import Cinema from "./cinema/Cinema";
 import Footer from "./footer/Footer";
 
 function App() {
