@@ -3,8 +3,10 @@
 @import "./../../utilities/intialize-styles/button-styles";
 
 .hotel-list {
+  position: absolute;
   margin: 70px 20px 100px;
   width: 40%;
+  
   .service-card {
     font-family: $textFont;
     position: relative;

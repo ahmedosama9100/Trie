@@ -10,6 +10,16 @@
   box-shadow: 0 0 3px #1b120f;
 }
 
+.reservation-form .terms {
+  align-items: baseline;
+  display: flex;
+  height: 25px;
+}
+
+.reservation-form .terms .terms-checkbox {
+  margin-right: 5px;
+}
+
 .reservation-form .reservation-button {
   border: #1b120f 1px solid;
   color: #1b120f;

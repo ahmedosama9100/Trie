@@ -26,7 +26,7 @@ function Hotel() {
     getRequest("http://localhost:8000/service/hotel")
       .then((res) => setHotels(res.data))
       .catch((err) => console.log(err));
-  });
+  }, []);
 
   return <Service data={hotels} />;
 }

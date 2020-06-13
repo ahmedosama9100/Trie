@@ -3,8 +3,9 @@
 .item {
   align-items: baseline;
   display: flex;
+  justify-content: space-between;
   height: 30px;
-  width: 40%;
+  width: 30%;
 
   .item-counter {
     background-color: inherit;
@@ -24,7 +25,7 @@
   }
 
   .item-name {
-    margin-right: 20px;
+    margin-right: 50px;
     font-size: 1.2rem;
     font-weight: bold;
   }
