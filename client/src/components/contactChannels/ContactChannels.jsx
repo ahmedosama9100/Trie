@@ -4,8 +4,6 @@ import InstagramIcon from "@material-ui/icons/Instagram";
 import EmailIcon from "@material-ui/icons/Email";
 import styles from "./styles/contact-channels.module.css";
 
-export default ContactChannels;
-
 function ContactChannels() {
   return (
     <ul className={styles["contact-channels"]}>
@@ -39,3 +37,5 @@ function ContactChannels() {
     </ul>
   );
 }
+
+export default ContactChannels;

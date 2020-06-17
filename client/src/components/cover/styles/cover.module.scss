@@ -1,6 +1,10 @@
-.logo-cover {
-  display: block;
-  height: auto;
-  margin: 0 auto;
-  width: 50%;
+.media-container {
+  display: flex;
+  justify-content: space-between;
+
+  .intro-video {
+    border-radius: 7px;
+    height: 500px;
+    margin-right: 100px;
+  }
 }

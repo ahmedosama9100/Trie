@@ -1,8 +1,6 @@
 import React from "react";
 import styles from "./styles/about-card.module.css";
 
-export default AboutCard;
-
 function AboutCard(props) {
   return (
     <div className={`card ${styles["card-container"]}`}>
@@ -18,3 +16,5 @@ function AboutCard(props) {
     </div>
   );
 }
+
+export default AboutCard;

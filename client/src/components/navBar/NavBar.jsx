@@ -3,8 +3,6 @@ import LogoIcon from "./../logoIcon/LogoIcon";
 import NavigationItems from "./../navigationItems/NavigationItems";
 import styles from "./styles/nav-styles.module.css";
 
-export default NavBar;
-
 function NavBar() {
   return (
     <div className={styles["navigation-bar"]}>
@@ -13,3 +11,5 @@ function NavBar() {
     </div>
   );
 }
+
+export default NavBar;

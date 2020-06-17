@@ -2,8 +2,6 @@ import React from "react";
 import ReservationFrom from "./../reservationForm/ReservationForm";
 import styles from "./styles/side-page.module.css";
 
-export default SidePage;
-
 function SidePage(props) {
   const data = props.data;
 
@@ -19,3 +17,5 @@ function SidePage(props) {
     </div>
   );
 }
+
+export default SidePage;

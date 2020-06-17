@@ -4,8 +4,6 @@ import Cover from "./../cover/Cover";
 import About from "./../about/About";
 import ContactUs from "./../contactUs/ContactUs";
 
-export default Home;
-
 function Home() {
   return (
     <ReactFullpage
@@ -31,3 +29,5 @@ function Home() {
     />
   );
 }
+
+export default Home;

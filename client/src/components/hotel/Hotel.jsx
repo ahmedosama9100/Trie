@@ -1,32 +1,28 @@
 import React, { useState, useEffect } from "react";
 import { getRequest } from "./../utilities/axiosRequests";
 import Service from "./../service/service";
-
-export default Hotel;
+import store from "./../utilities/stateMan/store";
+import setHotelsAction from "./../utilities/stateMan/actionCreator";
 
 function Hotel() {
-  const initialHotels = [
-    {
-      _id: "",
-      src: "",
-      name: "",
-      location: "",
-      rating: "",
-      description: "",
-      items: [
-        {
-          itemName: "",
-          itemAmount: 0,
-        },
-      ],
-    },
-  ];
-  const [hotels, setHotels] = useState(initialHotels);
+  const [hotels, setHotels] = useState();
   useEffect(() => {
     getRequest("http://localhost:8000/service/hotel")
-      .then((res) => setHotels(res.data))
+      .then((res) => {
+        store.dispatch(setHotelsAction(res.data));
+      })
       .catch((err) => console.log(err));
   }, []);
 
-  return <Service data={hotels} />;
+  useEffect(() => {
+    store.subscribe(() => {
+      if (store.getState().hotelReducer.length > 0) {
+        setHotels(store.getState().hotelReducer);
+      }
+    });
+  }, []);
+
+  return <div>{hotels !== undefined && <Service data={hotels} />}</div>;
 }
+
+export default Hotel;

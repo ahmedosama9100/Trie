@@ -2,8 +2,6 @@ import React from "react";
 import NavigationDropDown from "./../navigationDropDown/NavigationDropDown";
 import styles from "./styles/navigation-dropdown.module.css";
 
-export default NavigationItems;
-
 function NavigationItems() {
   return (
     <ul className={styles["links"]}>
@@ -11,7 +9,7 @@ function NavigationItems() {
         <div className="dropdown">
           <a
             className={`dropdown-toggle ${styles["dropdownMenuLink"]}`}
-            href="#"
+            href="/#"
             role="button"
             id="dropdownMenuLink"
             data-toggle="dropdown"
@@ -32,3 +30,5 @@ function NavigationItems() {
     </ul>
   );
 }
+
+export default NavigationItems;

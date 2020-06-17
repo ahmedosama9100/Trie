@@ -2,7 +2,33 @@ import React, { useState } from "react";
 import { postRequest } from "./../utilities/axiosRequests";
 import styles from "./styles/send.module.css";
 
-export default Send;
+function trackRequest(e, setUserRequest) {
+  const { name, value } = e.target;
+  setUserRequest((prev) => ({ ...prev, [name]: value }));
+}
+
+function handleSubmit(e, userRequest, setUserRequest) {
+  e.preventDefault();
+  const { email, fullName, title, content } = userRequest;
+  const body = {
+    email,
+    fullName,
+    title,
+    content,
+  };
+
+  postRequest("http://localhost:8000/send-request", body)
+    .then(() => {
+      alert("Your request submitted successfully");
+      setUserRequest({
+        email: "",
+        fullName: "",
+        title: "",
+        content: "",
+      });
+    })
+    .catch((err) => console.log(err));
+}
 
 function Send() {
   const request = {
@@ -13,31 +39,11 @@ function Send() {
   };
   const [userRequest, setUserRequest] = useState(request);
 
-  function trackRequest(e) {
-    const { name, value } = e.target;
-    setUserRequest((prev) => ({ ...prev, [name]: value }));
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    const { email, fullName, title, content } = userRequest;
-    const body = {
-      email,
-      fullName,
-      title,
-      content,
-    };
-
-    postRequest("http://localhost:8000/send-request", body)
-      .then(() => {
-        alert("Your request submitted successfully");
-        setUserRequest(request);
-      })
-      .catch((err) => console.log(err));
-  }
-
   return (
-    <form className={styles["user-request"]} onSubmit={handleSubmit}>
+    <form
+      className={styles["user-request"]}
+      onSubmit={(e) => handleSubmit(e, userRequest, setUserRequest)}
+    >
       <div className="form-group">
         <label htmlFor="user-email" className={styles["labels"]}>
           Email address
@@ -46,7 +52,7 @@ function Send() {
           className={`form-control ${styles["email"]}`}
           id="user-email"
           name="email"
-          onChange={trackRequest}
+          onChange={(e) => trackRequest(e, setUserRequest)}
           placeholder="E-mail"
           required
           type="email"
@@ -62,7 +68,7 @@ function Send() {
           className={`form-control ${styles["full-name"]}`}
           id="user-full-name"
           name="fullName"
-          onChange={trackRequest}
+          onChange={(e) => trackRequest(e, setUserRequest)}
           placeholder="Full Name"
           required
           type="text"
@@ -79,7 +85,7 @@ function Send() {
           className={`form-control ${styles["title"]}`}
           id="user-title"
           name="title"
-          onChange={trackRequest}
+          onChange={(e) => trackRequest(e, setUserRequest)}
           placeholder="Title"
           required
           type="text"
@@ -95,7 +101,7 @@ function Send() {
           className={`form-control ${styles["description"]}`}
           id="user-description"
           name="content"
-          onChange={trackRequest}
+          onChange={(e) => trackRequest(e, setUserRequest)}
           placeholder="Content"
           rows="3"
           value={userRequest.content}
@@ -111,3 +117,5 @@ function Send() {
     </form>
   );
 }
+
+export default Send;

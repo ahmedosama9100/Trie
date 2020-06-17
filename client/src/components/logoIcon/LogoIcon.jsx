@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import styles from "./styles/logo-icon.module.css";
 import trieLogo from "./images/trieLogo.png";
 
-export default LogoIcon;
-
 function LogoIcon() {
   return (
     <Link to="/">
@@ -12,3 +10,5 @@ function LogoIcon() {
     </Link>
   );
 }
+
+export default LogoIcon;
