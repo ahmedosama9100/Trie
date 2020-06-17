@@ -31,20 +31,20 @@ function buildBodyRequest(allItems, reservationData) {
   };
 }
 
-function handleReserve(e, reservationData, id) {
+async function handleReserve(e, reservationData, id) {
+  e.preventDefault();
   const allItems = document.querySelectorAll(".item-list");
   const url = `http://localhost:8000/hotel/reserve/${id}`;
   const body = buildBodyRequest(allItems, reservationData);
 
-  postRequest(url, body)
+  await postRequest(url, body)
     .then(() => {
       alert("Your request submitted successfully");
     })
     .catch((err) => alert("something wrong happened"))
     .finally(() => {
-      e.preventDefault();
+      window.location.reload();
     });
-  window.reload();
 }
 
 function ReservatioForm(props) {
@@ -68,13 +68,13 @@ function ReservatioForm(props) {
           ))}
       </div>
       <div className="form-group">
-        <label for="full-name">Full Name</label>
+        <label htmlFor="full-name">Full Name</label>
         <input
           type="text"
           className={`form-control ${styles["full-name-field"]}`}
           id="full-name"
           placeholder="Abd El Rahman Osama"
-          autocomplete="off"
+          autoComplete="off"
           required
           onChange={(e) => handleInputs(e, setRerservationData)}
           value={reservationData.fullName}
@@ -82,13 +82,13 @@ function ReservatioForm(props) {
         />
       </div>
       <div className="form-group">
-        <label for="Email">E-mail</label>
+        <label htmlFor="Email">E-mail</label>
         <input
           type="email"
           className={`form-control ${styles["email-field"]}`}
           id="Email"
           placeholder="name@service.com"
-          autocomplete="off"
+          autoComplete="off"
           required
           onChange={(e) => handleInputs(e, setRerservationData)}
           value={reservationData.email}

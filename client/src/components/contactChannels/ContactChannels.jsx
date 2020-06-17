@@ -18,7 +18,7 @@ function ContactChannels() {
       </li>
       <li>
         <a
-          href="https://www.instagram.com/"
+          href="https://www.instagram.com/TRIE_7000/"
           target="_blank"
           rel="noopener noreferrer"
         >

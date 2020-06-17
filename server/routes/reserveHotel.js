@@ -16,7 +16,7 @@ router.post("/:hotelid", async (req, res) => {
     const requestBody = req.body;
 
     const requestedItems = JSON.parse(requestBody.items);
-    console.log(requestedItems[0]);
+    //console.log(requestedItems[0]);
     requestedItems.forEach((item) => {
       hotelItems.forEach((hotelItem) => {
         if (item.itemName === hotelItem.itemName) {
@@ -40,7 +40,9 @@ router.post("/:hotelid", async (req, res) => {
     message.subject = "Order Confiramtion";
     message.html = `<h1>Order Summary</h1>
   <h3>Mr./Mrs. ${requestBody.name} You've reserved: </h3>
-  ${requestedItems.map((item) => `<p>${item.itemName}: ${item.itemAmount}</p>`)}
+  ${requestedItems.map((item) =>
+    item.itemAmount > 0 ? `<p>${item.itemName}: ${item.itemAmount}</p>` : null
+  )}
   <p>and your order number is : <strong>${hotel._id}</strong></p>
   `;
     res.json({ message: "reserved successfully" });
