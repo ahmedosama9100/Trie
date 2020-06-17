@@ -1,6 +1,6 @@
 # Trie :airplane:
 Trie helps tourists to make their journey much easier also to TRY new things <br />
-***Note: any form user submit will send a comfirmation email***
+***Note: any form user submit will send a confirmation email***
 *********************
 # Landing Page 
 ![cover page](/screenShots/cover.png)
