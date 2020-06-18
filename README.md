@@ -12,4 +12,4 @@ Trie helps tourists to make their journey much easier also to TRY new things <br
 ![about page](/screenShots/about.png)
 *********************
 # contact us 
-![cover page](/screenShots/contactus.png)
+![cover page](/screenShots/contact.png)
