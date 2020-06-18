@@ -1,3 +1,5 @@
+// render card in the service page
+
 import React from "react";
 import styles from "./styles/services-card.module.css";
 

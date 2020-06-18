@@ -1,3 +1,5 @@
+// contact page that contains sending requests form as well as contact channels
+
 import React from "react";
 import SendRequest from "./../sendRequest/Send";
 import ContactChannels from "./../contactChannels/ContactChannels";

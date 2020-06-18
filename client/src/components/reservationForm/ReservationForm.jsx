@@ -1,8 +1,11 @@
+// reserve any service from this reservation form
+
 import React, { useState } from "react";
 import { postRequest } from "./../utilities/axiosRequests";
 import Item from "./../reservedItem/ReservedItem";
 import styles from "./styles/reservation-form.module.css";
 
+// handle any change in inputs of the reservation form
 function handleInputs(e, setRerservationData) {
   const { name, value } = e.target;
   setRerservationData((prev) => ({
@@ -11,9 +14,11 @@ function handleInputs(e, setRerservationData) {
   }));
 }
 
+// form the body of the request to be sent to the backend
 function buildBodyRequest(allItems, reservationData) {
   let itemRequest = [];
 
+  // get number of reserved items
   allItems.forEach((item) => {
     const room = { itemName: "", itemAmount: 0 };
     room.itemAmount = item.childNodes[0].textContent;
@@ -31,30 +36,39 @@ function buildBodyRequest(allItems, reservationData) {
   };
 }
 
+// send reservation request when submit is triggered
 async function handleReserve(e, reservationData, id) {
   e.preventDefault();
+
   const allItems = document.querySelectorAll(".item-list");
-  const url = `http://localhost:8000/hotel/reserve/${id}`;
+
+  const url = `http://localhost:8000/hotel/reserve/${id}`; // id of the reserved card
   const body = buildBodyRequest(allItems, reservationData);
 
+  // make post request
   await postRequest(url, body)
     .then(() => {
       alert("Your request submitted successfully");
     })
-    .catch((err) => alert("something wrong happened"))
+    .catch((err) => {
+      console.log(err);
+      alert("something wrong happened");
+    })
     .finally(() => {
+      // reload the page after submitting, to remove inputs automatically
       window.location.reload();
     });
 }
 
 function ReservatioForm(props) {
-  const initReservation = {
+  // items of each service
+  const items = props.data.items;
+
+  // track email and user name of reservation from
+  const [reservationData, setRerservationData] = useState({
     fullName: "",
     email: "",
-  };
-
-  const items = props.data.items;
-  const [reservationData, setRerservationData] = useState(initReservation);
+  });
 
   return (
     <form
@@ -75,10 +89,10 @@ function ReservatioForm(props) {
           id="full-name"
           placeholder="Abd El Rahman Osama"
           autoComplete="off"
-          required
           onChange={(e) => handleInputs(e, setRerservationData)}
           value={reservationData.fullName}
           name="fullName"
+          required
         />
       </div>
       <div className="form-group">
@@ -89,14 +103,14 @@ function ReservatioForm(props) {
           id="Email"
           placeholder="name@service.com"
           autoComplete="off"
-          required
           onChange={(e) => handleInputs(e, setRerservationData)}
           value={reservationData.email}
           name="email"
+          required
         />
       </div>
       <div className={`input-group ${styles["terms"]}`}>
-        <input type="checkbox" required className={styles["terms-checkbox"]} />
+        <input type="checkbox" className={styles["terms-checkbox"]} required />
         <p>I agree to the terms of service</p>
       </div>
 

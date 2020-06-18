@@ -1,3 +1,5 @@
+// render side page with all full data
+
 import React from "react";
 import ReservationFrom from "./../reservationForm/ReservationForm";
 import styles from "./styles/side-page.module.css";

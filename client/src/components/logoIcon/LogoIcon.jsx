@@ -1,3 +1,5 @@
+// top left navigation bar icon
+
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./styles/logo-icon.module.css";

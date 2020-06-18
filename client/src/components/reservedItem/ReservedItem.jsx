@@ -1,18 +1,23 @@
+// counter of each item in the service
+
 import React, { useState } from "react";
 import AddIcon from "@material-ui/icons/Add";
 import RemoveIcon from "@material-ui/icons/Remove";
 import styles from "./styles/reserved-item.module.css";
 
+// increment the value of item
 function increment(itemCounter, setItemCounter) {
   setItemCounter(++itemCounter);
 }
 
+// decrement the value of the item until it reaches zero
 function decrement(itemCounter, setItemCounter) {
   setItemCounter(itemCounter ? --itemCounter : 0);
 }
 
 function Item(props) {
-  let [itemCounter, setItemCounter] = useState(0);
+  // track counter of items
+  const [itemCounter, setItemCounter] = useState(0);
 
   return (
     <span className={`item-list ${styles["item"]}`}>

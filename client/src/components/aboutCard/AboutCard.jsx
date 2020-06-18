@@ -1,3 +1,5 @@
+// render the card that will be shown in about page
+
 import React from "react";
 import styles from "./styles/about-card.module.css";
 

@@ -1,21 +1,30 @@
+// contact us form
+
 import React, { useState } from "react";
 import { postRequest } from "./../utilities/axiosRequests";
 import styles from "./styles/send.module.css";
 
+// track changes of inputs
 function trackRequest(e, setUserRequest) {
   const { name, value } = e.target;
   setUserRequest((prev) => ({ ...prev, [name]: value }));
 }
 
-function handleSubmit(e, userRequest, setUserRequest) {
-  e.preventDefault();
+// form body request
+function buildBodyRequest(userRequest) {
   const { email, fullName, title, content } = userRequest;
-  const body = {
+  return {
     email,
     fullName,
     title,
     content,
   };
+}
+
+// send a request when submit button is fired
+function handleSubmit(e, userRequest, setUserRequest) {
+  e.preventDefault();
+  const body = buildBodyRequest(userRequest);
 
   postRequest("http://localhost:8000/send-request", body)
     .then(() => {
@@ -31,12 +40,14 @@ function handleSubmit(e, userRequest, setUserRequest) {
 }
 
 function Send() {
+  // initialize requested data
   const request = {
     email: "",
     fullName: "",
     title: "",
     content: "",
   };
+  // track user inputs
   const [userRequest, setUserRequest] = useState(request);
 
   return (

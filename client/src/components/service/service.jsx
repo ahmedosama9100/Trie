@@ -1,18 +1,24 @@
+// this page responsible for handle all services in the site
+
 import React, { useState } from "react";
 import ServicesCard from "../servicesCard/ServicesCard";
 import SidePage from "../sidePage/SidePage";
 import styles from "./styles/service.module.css";
 
+// get full item by id (when the view button clicked)
 function searchItem(serviceData, id) {
   return serviceData.filter((singleItem) => singleItem._id === id);
 }
 
+// view side page when the view button clicked
 function viewSidePage(e, setSideData, serviceData) {
   setSideData(searchItem(serviceData, e.target.value)[0]);
 }
 
 function Service(props) {
+  // get all service data
   const serviceData = props.data;
+  // track side page data
   const [sideData, setSideData] = useState();
 
   return (

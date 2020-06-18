@@ -1,3 +1,5 @@
+// top right items in navgation bar
+
 import React from "react";
 import NavigationDropDown from "./../navigationDropDown/NavigationDropDown";
 import styles from "./styles/navigation-dropdown.module.css";

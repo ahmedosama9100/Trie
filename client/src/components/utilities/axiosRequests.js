@@ -1,7 +1,5 @@
-import queryString from "querystring";
 import axios from "axios";
-
-export { postRequest, getRequest };
+import queryString from "querystring";
 
 //make post request
 function postRequest(url, body) {
@@ -12,3 +10,5 @@ function postRequest(url, body) {
 function getRequest(url) {
   return axios.get(url);
 }
+
+export { postRequest, getRequest };

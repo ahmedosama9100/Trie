@@ -1,3 +1,5 @@
+// Landing page that views image logo and video
+
 import React from "react";
 import styles from "./styles/cover.module.css";
 import trieLogo from "./media/trieLogo.png";

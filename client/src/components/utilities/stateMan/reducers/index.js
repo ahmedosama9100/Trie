@@ -1,13 +1,13 @@
 import { combineReducers } from "redux";
 import cinemaReducer from "./cinemaReducer";
 import hotelReducer from "./hotelReducer";
-import resturantReducer from "./resturantReducer";
+import restaurantReducer from "./restaurantReducer";
 import aboutReducer from "./aboutReducer";
 
 const allReducers = combineReducers({
   hotelReducer,
   cinemaReducer,
-  resturantReducer,
+  restaurantReducer,
   aboutReducer,
 });
 

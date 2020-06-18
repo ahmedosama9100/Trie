@@ -1,3 +1,5 @@
+// viewing social media page and email
+
 import React from "react";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
