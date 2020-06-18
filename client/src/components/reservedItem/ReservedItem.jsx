@@ -29,12 +29,14 @@ function Item(props) {
         <button
           className={`rounded ${styles["add-item"]}`}
           onClick={() => increment(itemCounter, setItemCounter)}
+          type="button"
         >
           <AddIcon />
         </button>
         <button
           className={`rounded ${styles["remove-item"]}`}
           onClick={() => decrement(itemCounter, setItemCounter)}
+          type="button"
         >
           <RemoveIcon />
         </button>
